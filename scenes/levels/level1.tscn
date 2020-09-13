@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scene objects/TileMap.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scene objects/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scene objects/deaths/deathX5.tscn" type="PackedScene" id=3]
+
+[node name="level1" type="Node2D"]
+position = Vector2( -470.468, -176.8 )
+
+[node name="player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 742.599, 299.17 )
+
+[node name="TileMap" parent="." instance=ExtResource( 1 )]
+position = Vector2( 643.773, 321.365 )
+tile_data = PoolIntArray( 65536, 2, 196608, 65537, 2, 196609, 65538, 2, 196609, 65539, 2, 196609, 65540, 2, 196609, 65541, 2, 196610, 65542, 1, 2, 65543, 1, 1, 65544, 1, 1, 65545, 1, 1, 65546, 1, 0, 131080, 4, 0, 262135, 5, 0, 262136, 5, 1, 262137, 5, 1, 262138, 5, 1, 262139, 5, 1, 262140, 5, 1, 262141, 5, 1, 262142, 5, 1, 262143, 5, 2, 196608, 4, 0, 196609, 4, 0, 196610, 4, 0, 196611, 4, 0, 196612, 4, 0, 196613, 4, 0, 196614, 4, 0, 196617, 5, 0, 196618, 5, 1, 196619, 5, 1, 196620, 5, 1, 196621, 5, 1, 196622, 5, 1, 196623, 5, 2, 327671, 5, 131072, 327672, 5, 131073, 327673, 5, 131073, 327674, 5, 131073, 327675, 5, 131073, 327676, 5, 131073, 327677, 5, 131073, 327678, 5, 131073, 327679, 5, 458758, 262144, 5, 196609, 262145, 5, 196609, 262146, 5, 196610, 262153, 5, 131072, 262154, 5, 131073, 262155, 5, 131073, 262156, 5, 131073, 262157, 5, 131073, 262158, 5, 131073, 262159, 5, 131074 )
+
+[node name="death_field" type="Node" parent="."]
+
+[node name="death" parent="death_field" instance=ExtResource( 3 )]
+position = Vector2( 417.552, 197.2 )

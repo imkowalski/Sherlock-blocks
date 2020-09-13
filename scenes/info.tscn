@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/Sherlock_blocks.theme" type="Theme" id=1]
+[ext_resource path="res://scripts/info.gd" type="Script" id=2]
+
+[node name="info" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 419.0
+margin_top = 77.0
+margin_right = 860.0
+margin_bottom = 642.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_right = 441.0
+margin_bottom = 537.0
+text = "Made by kowal
+
+sherlock blocks was
+captured by the evil
+Professor Moriarty
+and genetikly modified
+as a expriment rabbit
+by that Sherlock blocks
+got the ability to
+double jump in mid air
+lucky for sherlock he got 
+a chance to escape.
+
+
+
+
+A/LEFT arrow - left
+D/Right arrow - right
+Spacebar/UP arrow - up
+spacebar/UP arrow - double jump"
+align = 1
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 541.0
+margin_right = 441.0
+margin_bottom = 565.0
+text = "Back to main menu"
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]
