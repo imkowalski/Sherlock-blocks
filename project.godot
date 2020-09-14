@@ -17,6 +17,15 @@ _global_script_class_icons={
 
 config/name="Sherlock Blocks"
 run/main_scene="res://scenes/main_menu.tscn"
+boot_splash/image="res://assets/icon.png"
+boot_splash/fullsize=false
+boot_splash/use_filter=false
+boot_splash/bg_color=Color( 0.447059, 0.447059, 0.447059, 1 )
+config/icon="res://assets/icon.png"
+
+[debug]
+
+settings/stdout/print_fps=true
 
 [display]
 
@@ -41,7 +50,8 @@ esc={
 
 [rendering]
 
-quality/subsurface_scattering/quality=2
+quality/shadows/filter_mode=0
+quality/shading/force_vertex_shading=true
 quality/voxel_cone_tracing/high_quality=true
 environment/default_clear_color=Color( 0.384314, 0.384314, 0.384314, 1 )
 environment/default_environment="res://default_env.tres"

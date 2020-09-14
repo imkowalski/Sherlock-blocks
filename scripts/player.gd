@@ -13,11 +13,9 @@ var motion = Vector2()
 
 func _process(delta):
 	if Input.is_action_pressed("esc"):
-		get_tree().change_scene("res://start menu.tscn")
+		get_tree().change_scene("res://scenes/main_menu.tscn")
 
 func _physics_process(delta):
-	
-	
 	
 	motion.y += gravity
 	if motion.y > mfs:
