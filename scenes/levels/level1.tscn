@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scene objects/TileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scene objects/player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://scene objects/deaths/death_long.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scripts/from1.gd" type="Script" id=5]
 [ext_resource path="res://assets/warp.png" type="Texture" id=6]
+[ext_resource path="res://scene objects/coin.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16.139, 36.1825 )
@@ -40,4 +41,12 @@ texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="from1"]
 shape = SubResource( 1 )
+
+[node name="Node" type="Node" parent="."]
+
+[node name="coin" parent="Node" instance=ExtResource( 7 )]
+position = Vector2( 731.519, 150.1 )
+
+[node name="coin2" parent="Node" instance=ExtResource( 7 )]
+position = Vector2( 1230.64, 123.529 )
 [connection signal="body_entered" from="from1" to="from1" method="_on_from1_body_entered"]
